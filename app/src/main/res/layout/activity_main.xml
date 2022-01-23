@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/crop_image_menu_crop"
+            android:src="@drawable/images"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/clickCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_camera_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clickGallery"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/clickCamera"
+            app:layout_constraintEnd_toEndOf="@+id/clickCamera"
+            app:layout_constraintTop_toBottomOf="@+id/clickCamera"
+            />
+
+
+        <ImageView
+            android:id="@+id/clickGallery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_add_photo_alternate_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clickCamera"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/clickGallery"
+            app:layout_constraintEnd_toEndOf="@+id/clickGallery"
+            app:layout_constraintTop_toBottomOf="@+id/clickGallery"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
